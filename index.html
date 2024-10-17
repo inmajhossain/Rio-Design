@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rio Tamplate</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Scrolling Script -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              inter: ["inter", "sans"],
+              shahin: ["shahin", "sans"],
+              inter2: ["inter2", "sans"],
+              inter3: ["inter3", "sans"],
+            },
+            // Scroling Script Start
+            animation: {
+              "infinite-scroll": "infinite-scroll 25s linear infinite",
+            },
+            keyframes: {
+              "infinite-scroll": {
+                from: { transform: "translateX(0)" },
+                to: { transform: "translateX(-50%)" },
+              },
+            },
+            // Scroling Script End
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-inter text-black bg-slate-100">
+    <img
+      class="absolute top-[0px] -z-10"
+      src="asset/image/header and hero background.svg"
+      alt=""
+    />
+    <!-- Header Section Start -->
+    <header class="mx-auto md:w-[1200px] mt-[50px]">
+      <div
+        class="mx-auto md:w-[1200px] md:flex md:flex-row bg-indigo-100 md:items-center justify-between md:px-[20px] md:py-[5px]"
+      >
+        <img
+          src="https://framerusercontent.com/images/WvIxk2OsDPSdCdejZp7vMsFKbs.svg"
+          alt="logo image"
+        />
+
+        <nav class="md:flex md:gap-[25px] font-semibold">
+          <a href="#">Home</a>
+          <a href="#">About us</a>
+          <a href="#">Blog</a>
+        </nav>
+        <button
+          class="px-[15px] py-[7px] bg-blue-800 rounded-[25px] text-white"
+        >
+          Get Started
+        </button>
+      </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Main Section Start -->
+    <main>
+      <!-- Hero Section Start -->
+      <section class="mx-auto md:w-[1200px] md:h-[1150px] mt-[50px]">
+        <div data-aos="fade-up" class="mx-auto text-center h-[400px] flex flex-col gap-[25px]">
+          <h1
+            class="md:text-[60px] font-bold md:w-[800px] mx-auto text-center md:leading-[60px]"
+          >
+            Save time &
+            <span class="text-indigo-800">work smarter</span> with AI Automation
+          </h1>
+          <p class="md:w-[480px] mx-auto font-semibold">
+            We help you automate your workflows, automate repetitive tasks, and
+            elevate your business.
+          </p>
+          <button
+            class="mx-auto w-[220px] px-[12px] py-[7px] bg-blue-800 rounded-[25px] text-white"
+          >
+            Book Your Free Audit Call
+          </button>
+          <!-- Happy Clients Start -->
+          <div class="flex items-center justify-between w-[320px] mx-auto">
+            <div class="flex">
+              <img
+                src="https://framerusercontent.com/images/sFJggTzla8eMLg8n1AbKDQlyulU.jpg"
+                alt=""
+                class="rounded-full size-[60px] object-cover border-indigo-800 border-[2px]"
+              />
+              <img
+                src="https://framerusercontent.com/images/JhbGle453RWF0QjzZnSxbtxRBiA.jpg"
+                alt=""
+                class="rounded-full size-[60px] object-cover border-indigo-800 border-[2px] ml-[-25px]"
+              />
+              <img
+                src="https://framerusercontent.com/images/hCsV8dkBKP9VEaaIlJr8Bk89bX4.jpg"
+                alt=""
+                class="rounded-full size-[60px] object-cover border-indigo-800 border-[2px] ml-[-25px]"
+              />
+            </div>
+            <div class="text-left font-semibold">
+              <h3>200+ happy clients!</h3>
+              <div class="flex gap-[20px] items-center text-left mt-[5px]">
+                <h4>Join them now</h4>
+                <img src="asset/image/right arrow.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <!-- Happy Clients End -->
+          <img
+            src="asset/image/Hero.webp"
+            alt=""
+            class="md:h-[700px] rounded-[20px]"
+          />
+          <h3>Trusted by 40+ worldwide clients</h3>
+        </div>
+      </section>
+      <!-- Hero Section End -->
+      <!-- Scrolling Section Start -->
+
+      <section class="relative font-inter antialiased mb-[50px] mx-auto">
+        <div
+          class="relative flex flex-col justify-center items-center overflow-hidden h-[60px] hover:bg-slate-200 md:w-[1200px] mx-auto"
+        >
+          <div class="w-full max-w-[1200px] mx-auto px-4 md:px-0 py-24">
+            <div class="text-center">
+              <!-- Logo Carousel animation -->
+              <div
+                x-data="{}"
+                x-init="$nextTick(() => {
+                            let ul = $refs.logos;
+                            ul.insertAdjacentHTML('afterend', ul.outerHTML);
+                            ul.nextSibling.setAttribute('aria-hidden', 'true');
+                        })"
+                class="w-full mx-auto inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
+              >
+                <ul
+                  x-ref="logos"
+                  class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
+                >
+                  <li>
+                    <img src="asset/image/l1.svg" alt="Facebook" />
+                  </li>
+                  <li>
+                    <img src="asset/image/l2.svg" alt="Disney" />
+                  </li>
+                  <li>
+                    <img src="asset/image/l3.svg" alt="Airbnb" />
+                  </li>
+                  <li>
+                    <img src="asset/image/l4.svg" alt="Apple" />
+                  </li>
+                  <li>
+                    <img src="asset/image/l5.svg" alt="Spark" />
+                  </li>
+                  <li>
+                    <img src="asset/image/l3.svg" alt="Airbnb" />
+                  </li>
+                </ul>
+              </div>
+              <!-- End: Logo Carousel animation -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Scrolling Section End -->
+      <!-- Service Section Start -->
+      <section class="mx-auto md:w-[1200px] md:h-[800px]">
+        <div data-aos="fade-up" class="mx-auto items-center text-center flex flex-col gap-[30px]">
+          <button
+            class="mx-auto items-center px-[10px] py-[7px] bg-white text-blue-800 rounded-[10px] font-semibold"
+          >
+            SERVICE
+          </button>
+          <h2 class="md:w-[500px] md:text-[40px] font-bold">
+            <span class="text-blue-800">AI-powered</span> automation services
+          </h2>
+          <!-- 4 Box div Start -->
+          <div class="flex gap-[20px] flex-wrap">
+            <!-- Box-1 -->
+            <div
+              class="md:w-[540px] bg-white rounded-[15px] text-left p-[20px] flex flex-col gap-[10px] hover:rotate-[-1deg] hover:transition-all hover:duration-[500ms]"
+            >
+              <img class="size-[50px]" src="asset/image/chat.svg" alt="" />
+              <h3 class="font-semibold text-[22px]">
+                Customer Support Chatbots
+              </h3>
+              <p>
+                Streamline operations and enhance productivity with AI-driven
+                automation.
+              </p>
+              <div
+                class="flex gap-[20px] items-center text-left text-blue-800 mt-[5px] font-semibold"
+              >
+                <h4>Learn more</h4>
+                <a href=""><img src="asset/image/right arrow.svg" alt="" /></a>
+              </div>
+            </div>
+            <!-- Box-2 -->
+            <div
+              class="md:w-[540px] bg-white rounded-[15px] text-left p-[20px] flex flex-col gap-[10px] hover:rotate-[-1deg] hover:transition-all hover:duration-[500ms]"
+            >
+              <img class="size-[50px]" src="asset/image/service-2.svg" alt="" />
+              <h3 class="font-semibold text-[22px]">
+                Workflow Automations
+              </h3>
+              <p>
+                Cut down on manual labor costs through efficient and precise automated processes.
+              </p>
+              <div
+                class="flex gap-[20px] items-center text-left text-blue-800 mt-[5px] font-semibold"
+              >
+                <h4>Learn more</h4>
+                <a href=""><img src="asset/image/right arrow.svg" alt="" /></a>
+              </div>
+            </div>
+            <!-- Box-3 -->
+            <div
+              class="md:w-[540px] bg-white rounded-[15px] text-left p-[20px] flex flex-col gap-[10px] hover:rotate-[-1deg] hover:transition-all hover:duration-[500ms]"
+            >
+              <img class="size-[50px]" src="asset/image/service-3.svg" alt="" />
+              <h3 class="font-semibold text-[22px]">
+                Chatbots for Internal Use
+              </h3>
+              <p>
+                Automate tasks to ensure your business operates seamlessly around the clock.
+              </p>
+              <div
+                class="flex gap-[20px] items-center text-left text-blue-800 mt-[5px] font-semibold"
+              >
+                <h4>Learn more</h4>
+                <a href=""><img src="asset/image/right arrow.svg" alt="" /></a>
+              </div>
+            </div>
+            <!-- Box-4 -->
+            <div
+              class="md:w-[540px] bg-white rounded-[15px] text-left p-[20px] flex flex-col gap-[10px] hover:rotate-[-1deg] hover:transition-all hover:duration-[500ms]"
+            >
+              <img class="size-[50px]" src="asset/image/service-4.svg" alt="" />
+              <h3 class="font-semibold text-[22px]">
+                Custom GPTs
+              </h3>
+              <p>
+                Harness the power of AI for in-depth analytics and informed decision-making.
+              </p>
+              <div
+                class="flex gap-[20px] items-center text-left text-blue-800 mt-[5px] font-semibold"
+              >
+                <h4>Learn more</h4>
+                <a href=""><img src="asset/image/right arrow.svg" alt="" /></a>
+              </div>
+            </div>
+          </div>
+          <!-- 4 Box div End -->
+        </div>
+      </section>
+      <!-- Service Section End -->
+
+      <!-- Workflow Section Start -->
+      <section class="mx-auto md:w-[1200px] md:h-[450px]">
+        <div data-aos="fade-up" class="mx-auto flex justify-between items-center">
+          <!-- Workflow left  -->
+
+          <div class="flex flex-col gap-[25px] md:w-[580px]">
+            <button
+              class="w-[150px] items-center px-[10px] py-[7px] bg-white text-blue-800 rounded-[10px] font-semibold"
+            >
+              Content block
+            </button>
+            <h2 class="md:w-[500px] md:text-[40px] font-bold">
+              Workflows with our AI automation
+              <span class="text-blue-800">expertise</span>
+            </h2>
+            <p class="md:w-[550px]">
+              Revolutionize tasks, reduce errors, and boost efficiency with
+              intelligent technology, streamlining operations for unparalleled
+              productivity.
+            </p>
+            <div
+              class="flex gap-[20px] items-center text-left text-blue-800 mt-[5px] font-semibold"
+            >
+              <a href=""><img src="asset/image/right arrow.svg" alt="" /></a>
+              <h4>Functional sections</h4>
+            </div>
+            <div
+              class="flex gap-[20px] items-center text-left text-blue-800 mt-[5px] font-semibold"
+            >
+              <a href=""><img src="asset/image/right arrow.svg" alt="" /></a>
+              <h4>Easy to customize</h4>
+            </div>
+            <button
+              class="w-[220px] px-[12px] py-[7px] bg-blue-800 rounded-[25px] text-white"
+            >
+              Book Your Free Audit Call
+            </button>
+          </div>
+          <!-- Workflow Right -->
+          <div class="md:w-[580px]">
+            <img
+              src="asset/image/wrrkflow right.png"
+              alt=""
+              class="md:w-[450px]"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- Workflow Section End -->
+      <!-- Harnessing Section Start -->
+      <section class="mx-auto md:w-[1200px] md:h-[650px] mt-[80px]">
+        <div data-aos="fade-up" class="mx-auto flex justify-between items-center">
+          <!-- Harnessing Left -->
+          <div class="md:w-[580px]">
+            <img src="asset/image/ai.png" alt="" class="md:w-[450px]" />
+          </div>
+          <!-- Harnessing Right  -->
+
+          <div class="flex flex-col gap-[25px] md:w-[580px]">
+            <button
+              class="w-[150px] items-center px-[10px] py-[7px] bg-white text-blue-800 rounded-[10px] font-semibold"
+            >
+              Content block
+            </button>
+            <h2 class="md:w-[500px] md:text-[40px] font-bold">
+              Harnessing AI for business success
+            </h2>
+            <!-- Block Div 1 -->
+            <div
+              class="flex md:w-[500px] py-[10px] bg-transparent border-blue-800 border-[1px] rounded-[10px] justify-around"
+            >
+              <div class="flex justify-around items-center gap-[20px]">
+                <img
+                  src="asset/image/menu icon.svg"
+                  alt=""
+                  class="size-[60px] bg-white rounded-[10px] p-[10px]"
+                />
+                <h3 class="md:w-[330px]">
+                  Boost efficiency and cut costs with AI-powered automation
+                </h3>
+              </div>
+              <img src="asset/image/right arrow.svg" alt="" />
+            </div>
+            <!-- Block Div 2 -->
+            <div
+              class="flex md:w-[500px] py-[10px] bg-transparent border-blue-800 border-[1px] rounded-[10px] justify-around"
+            >
+              <div class="flex justify-around items-center gap-[20px]">
+                <img
+                  src="asset/image/net port.svg"
+                  alt=""
+                  class="size-[60px] bg-white rounded-[10px] p-[10px]"
+                />
+                <h3 class="md:w-[330px]">
+                  Optimize operations, minimize errors, and save resources
+                </h3>
+              </div>
+              <img src="asset/image/right arrow.svg" alt="" />
+            </div>
+            <p class="md:w-[500px] font-semibold">
+              “Couldn’t be happier with the work the guys from XYZ Agency did
+              for us. Made sales 10x more efficient.”
+            </p>
+            <!-- William Jamws Block -->
+            <div class="flex items-center justify-between w-[200px]">
+              <div>
+                <img
+                  src="asset/image/william.jpg"
+                  alt=""
+                  class="rounded-full size-[60px] object-cover border-indigo-800 border-[2px]"
+                />
+              </div>
+              <div class="text-left font-semibold">
+                <h3>William James</h3>
+                <h4>CEO, XYZ</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Harnessing Section End -->
+      <!-- Before Comments Section Start -->
+      <section class="mx-auto md:w-[1200px] md:h-[250px] mt-[50px]">
+        <div data-aos="fade-up" class="mx-auto items-center text-center flex flex-col gap-[30px]">
+          <button
+            class="mx-auto items-center px-[10px] py-[7px] bg-white text-blue-800 rounded-[10px] font-semibold"
+          >
+            Testimonials
+          </button>
+          <h2 class="md:w-[500px] md:text-[40px] font-bold">
+            Leading the way in AI automation
+          </h2>
+        </div>
+      </section>
+
+      <!-- Before Comments Section End -->
+      <!-- Comments Section Start -->
+
+      <section class="relative font-inter antialiased mb-[50px] mx-auto">
+        <div data-aos="fade-up"
+          class="relative flex flex-col justify-center items-center overflow-hidden md:h-[350px] md:w-[1200px] mx-auto"
+        >
+          <div class="w-full max-w-[1200px] mx-auto px-4 md:px-0 py-24">
+            <div class="text-center">
+              <!-- Logo Carousel animation -->
+              <div
+                x-data="{}"
+                x-init="$nextTick(() => {
+                            let ul = $refs.logos;
+                            ul.insertAdjacentHTML('afterend', ul.outerHTML);
+                            ul.nextSibling.setAttribute('aria-hidden', 'true');
+                        })"
+                class="w-full mx-auto inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
+              >
+                <ul
+                  x-ref="logos"
+                  class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
+                >
+                  <!-- List - 1 -->
+                  <li
+                    class="w-[300px] h-[280px] p-[20px] bg-white border-[1px] border-blue-800 rounded-[5px] flex flex-col gap-[15px]"
+                  >
+                    <!-- William Jamws Block -->
+                    <div class="flex items-center justify-between w-[200px]">
+                      <div>
+                        <img
+                          src="asset/image/william.jpg"
+                          alt=""
+                          class="rounded-full size-[60px] object-cover border-indigo-800 border-[2px]"
+                        />
+                      </div>
+                      <div class="text-left font-semibold">
+                        <h3>William James</h3>
+                        <h4>CEO, XYZ</h4>
+                      </div>
+                    </div>
+                    <p class="text-left">
+                      "Our chatbot has taken over more than 60% of our support
+                      tickets, and customers are not even noticing they are
+                      talking to AI!"
+                    </p>
+                    <img
+                      src="asset/image/star.svg"
+                      alt=""
+                      class="size-[100px]"
+                    />
+                  </li>
+                  <!-- List - 2 -->
+                  <li
+                    class="w-[300px] h-[280px] p-[20px] bg-white border-[1px] border-blue-800 rounded-[5px] flex flex-col gap-[15px]"
+                  >
+                    <!-- William Jamws Block -->
+                    <div class="flex items-center justify-between w-[200px]">
+                      <div>
+                        <img
+                          src="asset/image/sFJggTzla8eMLg8n1AbKDQlyulU (1).jpg"
+                          alt=""
+                          class="rounded-full size-[60px] object-cover border-indigo-800 border-[2px]"
+                        />
+                      </div>
+                      <div class="text-left font-semibold">
+                        <h3>Jane Lewis</h3>
+                        <h4 class="text-[10px]">Marketing Director @ ABC</h4>
+                      </div>
+                    </div>
+                    <p class="text-left">
+                      "Our chatbot has taken over more than 60% of our support
+                      tickets, and customers are not even noticing they are
+                      talking to AI!"
+                    </p>
+                    <img
+                      src="asset/image/star.svg"
+                      alt=""
+                      class="size-[100px]"
+                    />
+                  </li>
+                  <!-- List - 3 -->
+                  <li
+                    class="w-[300px] h-[280px] p-[20px] bg-white border-[1px] border-blue-800 rounded-[5px] flex flex-col gap-[15px]"
+                  >
+                    <!-- William Jamws Block -->
+                    <div class="flex items-center justify-between w-[200px]">
+                      <div>
+                        <img
+                          src="asset/image/hCsV8dkBKP9VEaaIlJr8Bk89bX4 (1).jpg"
+                          alt=""
+                          class="rounded-full size-[60px] object-cover border-indigo-800 border-[2px]"
+                        />
+                      </div>
+                      <div class="text-left font-semibold">
+                        <h3>Alex James</h3>
+                        <h4 class="text-[10px]">Marketing Director @ ABC</h4>
+                      </div>
+                    </div>
+                    <p class="text-left">
+                      "Our chatbot has taken over more than 60% of our support
+                      tickets, and customers are not even noticing they are
+                      talking to AI!"
+                    </p>
+                    <img
+                      src="asset/image/star.svg"
+                      alt=""
+                      class="size-[100px]"
+                    />
+                  </li>
+                  <!-- List - 4 -->
+                  <li
+                    class="w-[300px] h-[280px] p-[20px] bg-white border-[1px] border-blue-800 rounded-[5px] flex flex-col gap-[15px]"
+                  >
+                    <!-- William Jamws Block -->
+                    <div class="flex items-center justify-between w-[200px]">
+                      <div>
+                        <img
+                          src="asset/image/JhbGle453RWF0QjzZnSxbtxRBiA (1).jpg"
+                          alt=""
+                          class="rounded-full size-[60px] object-cover border-indigo-800 border-[2px]"
+                        />
+                      </div>
+                      <div class="text-left font-semibold">
+                        <h3>William James</h3>
+                        <h4 class="text-[10px]">Marketing Director @ ABC</h4>
+                      </div>
+                    </div>
+                    <p class="text-left">
+                      "Our chatbot has taken over more than 60% of our support
+                      tickets, and customers are not even noticing they are
+                      talking to AI!"
+                    </p>
+                    <img
+                      src="asset/image/star.svg"
+                      alt=""
+                      class="size-[100px]"
+                    />
+                  </li>
+                  <!-- List - 5 -->
+                  <li
+                    class="w-[300px] h-[280px] p-[20px] bg-white border-[1px] border-blue-800 rounded-[5px] flex flex-col gap-[15px]"
+                  >
+                    <!-- William Jamws Block -->
+                    <div class="flex items-center justify-between w-[200px]">
+                      <div>
+                        <img
+                          src="asset/image/william.jpg"
+                          alt=""
+                          class="rounded-full size-[60px] object-cover border-indigo-800 border-[2px]"
+                        />
+                      </div>
+                      <div class="text-left font-semibold">
+                        <h3>William James</h3>
+                        <h4 class="text-[10px]">Marketing Director @ ABC</h4>
+                      </div>
+                    </div>
+                    <p class="text-left">
+                      "Our chatbot has taken over more than 60% of our support
+                      tickets, and customers are not even noticing they are
+                      talking to AI!"
+                    </p>
+                    <img
+                      src="asset/image/star.svg"
+                      alt=""
+                      class="size-[100px]"
+                    />
+                  </li>
+                </ul>
+              </div>
+              <!-- End: Logo Carousel animation -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Comments Scrolling Section End -->
+      <!-- Get Started Section Start -->
+      <section class="mx-auto md:w-[1200px]">
+        <div data-aos="fade-up" class="flex md:w-[1200px] md:h-[1000px] justify-between">
+          <!-- Left -->
+           <div>
+           <div class=" flex flex-col gap-[20px] sticky top-0">
+            
+            <button
+              class=" w-[150px] items-center px-[10px] py-[7px] bg-white text-blue-800 rounded-[10px] font-semibold"
+            >
+            Process
+            </button>
+            <h2 class=" md:w-[500px] md:text-[40px] font-bold">
+              How to get started
+            </h2>
+            <p class=" md:w-[550px]">
+              Unleash the power of AI automation to transform routine processes, ensuring precision, 24/7 availability, and significant cost savings.
+            </p>
+            
+            <button
+              class=" w-[220px] px-[12px] py-[7px] bg-blue-800 rounded-[25px] text-white"
+            >
+              Book Your Free Audit Call
+            </button>
+          </div>
+        </div>
+        
+
+          <!-- Right -->
+          <div>
+            <div class="flex flex-col gap-[20px]">
+              <!-- Box-1 -->
+              <div
+                class="md:w-[540px] bg-white rounded-[15px] text-left p-[20px] flex flex-col gap-[10px] hover:rotate-[-1deg] hover:transition-all hover:duration-[500ms]"
+              >
+                <h3 class="font-bold text-[30px] text-blue-800">01</h3>
+                <h3 class="font-semibold text-[22px]">
+                  Book a discovery call
+                </h3>
+                <p>
+                  Book your free discovery call by clicking one of the buttons on this page.
+                </p>
+                <div
+                  class="flex gap-[20px] items-center text-left text-blue-800 mt-[5px] font-semibold"
+                >
+                  <h4>Get Started</h4>
+                  <a href=""><img src="asset/image/right arrow.svg" alt="" /></a>
+                </div>
+              </div>
+              <!-- Box-2 -->
+              <div
+                class="md:w-[540px] bg-white rounded-[15px] text-left p-[20px] flex flex-col gap-[10px] hover:rotate-[-1deg] hover:transition-all hover:duration-[500ms]"
+              >
+              <h3 class="font-bold text-[30px] text-blue-800">02</h3>
+              <h3 class="font-semibold text-[22px]">
+                Get a personal growth strategy
+              </h3>
+              <p>
+                On this call, we'll assess your business and start working on your personal growth strategy.
+              </p>
+              
+              </div>
+              <!-- Box-3 -->
+              <div
+                class="md:w-[540px] bg-white rounded-[15px] text-left p-[20px] flex flex-col gap-[10px] hover:rotate-[-1deg] hover:transition-all hover:duration-[500ms]"
+              >
+              <h3 class="font-bold text-[30px] text-blue-800">03</h3>
+              <h3 class="font-semibold text-[22px]">
+                Onboarding
+              </h3>
+              <p>
+                After the strategy is complete, we will onboard you onto our softwares to ensure a smooth process.
+              </p>
+              
+              </div>
+              <!-- Box-4 -->
+              <div
+                class="md:w-[540px] bg-white rounded-[15px] text-left p-[20px] flex flex-col gap-[10px] hover:rotate-[-1deg] hover:transition-all hover:duration-[500ms]"
+              >
+              <h3 class="font-bold text-[30px] text-blue-800">04</h3>
+              <h3 class="font-semibold text-[22px]">
+                Implementation & results
+              </h3>
+              <p>
+                And finally, we get to implementing the growth strategy and working to see results.
+              </p>
+              <div
+                class="flex gap-[20px] items-center text-left text-blue-800 mt-[5px] font-semibold"
+              >
+                <h4>Get Started</h4>
+                <a href=""><img src="asset/image/right arrow.svg" alt="" /></a>
+              </div>
+              </div>
+            </div>
+          </div>
+           </div>           
+        </div>
+      </section>
+
+      <!-- Get Started Section End -->
+      <!-- Before Pricing Section Start -->
+      <section class="mx-auto md:w-[1200px] md:h-[250px] mt-[50px]">
+        <div data-aos="fade-up" class="mx-auto items-center text-center flex flex-col gap-[10px]">
+          <button
+            class="mx-auto items-center px-[10px] py-[7px] bg-white text-blue-800 rounded-[10px] font-semibold"
+          >
+          Pricing
+          </button>
+          
+          <h2 class="md:w-[800px] md:text-[40px] font-bold">
+            Plans to Fit Your Business
+          </h2>
+          <div class="flex w-[300px] justify-around items-center">
+            <h3 class="font-semibold">Monthly</h3>
+            <div class="w-[70px] h-[30px] bg-transparent flex items-center hover:justify-end rounded-[25px] px-[5px] py-[9px] border-black border-[1px]">
+              <div class="w-[25px] h-[25px] bg-blue-800 rounded-full "></div>
+            </div>
+            <h3 class="font-semibold opacity-50">Yearly</h3>
+          </div>
+
+        </div>
+      </section>
+      <!-- Before Pricing Section End -->
+       <!-- Pricing Section Start -->
+        <section>
+          <div data-aos="fade-up" class="md:max-w-[1200px] mx-auto p-[30px] flex gap-[50px]">
+            <!-- 1st Box -->
+             <div class="w-[350px] h-[650px] bg-white rounded-[15px] flex flex-col justify-between items-start p-[5px]">
+              <!-- 1-st -->
+               <div class="bg-white w-[340px] rounded-[15px] flex flex-col justify-between gap-[5px] p-[20px] hover:w-[350px]  hover:mt-[-5px] hover:ml-[-5px] hover:skew-xy-1 transition-all 2s ease-in border-[1px] border-blue-800 font-semibold hover:shadow-[0_0_10px_0px_rgba(100,20,50)] hover:border-none">
+                <h3>Pro</h3>
+                <h2 class="text-[35px] font-bold">$199/m</h2>
+                <p>Price breakdown here</p>
+                <button
+              class=" w-[220px] px-[12px] py-[7px] bg-blue-800 rounded-[25px] mx-auto text-white"
+            >
+              Get Started
+            </button>
+            <p class="text-center font-normal">Got questions? Talk to an expert.</p>
+               </div>
+               <!-- 2-nd -->
+                <div class="flex flex-col gap-[5px] ml-[15px] ">
+                  
+                  <div
+                class="flex gap-[20px] items-center text-black font-semibold">
+                <a href=""><img src="asset/image/right arrow.svg" alt="" /></a>
+                <h4>Feature here</h4>
+                </div>
+
+                <div
+                class="flex gap-[20px] items-center text-black font-semibold">
+                <a href=""><img src="asset/image/right arrow.svg" alt="" /></a>
+                <h4>Feature here</h4>
+                </div>
+
+                <div
+                class="flex gap-[20px] items-center text-black font-semibold">
+                <a href=""><img src="asset/image/right arrow.svg" alt="" /></a>
+                <h4>Feature here</h4>
+                </div>
+
+                <div
+                class="flex gap-[20px] items-center text-black font-semibold">
+                <a href=""><img src="asset/image/right arrow.svg" alt="" /></a>
+                <h4>Feature here</h4>
+                </div>
+
+                <div
+                class="flex gap-[20px] items-center text-black font-semibold">
+                <a href=""><img src="asset/image/right arrow.svg" alt="" /></a>
+                <h4>Feature here</h4>
+                </div>
+              
+
+                </div>
+                <!-- 3rd Accrodion box -->
+                <div
+                class="accordion-box mt-[10px] mb-[25px] md:w-[310px] text-[15px] mx-auto border-[1px] rounded-[5px] border-blue-800"
+              >
+                <button
+                  class="accordion-button flex items-center justify-between w-full py-2 px-[30px] bg-transparent text-gray-800 font-bold"
+                  aria-expanded="false"
+                >
+                  <span class="text-black"
+                    >Optional add-ons</span
+                  >
+                  <span class="icon-open text-[25px] font-semibold text-black"
+                    >+</span
+                  >
+                  <span
+                    class="icon-close hidden text-[25px] font-semibold transform: rotate-[45deg] text-black"
+                    >+</span
+                  >
+                </button>
+                <div
+                  class="accordion-content hidden px-[30px] bg-slate-100 text-black py-[15px]"
+                >
+                  <ol class="font-normal flex flex-col gap-[10px]">
+                    <li>Placeholder - $400/yr</li>
+                    <li>Placeholder - $400/yr</li>
+                    <li>Placeholder - $400/yr</li>
+                  </ol>
+                </div>
+              </div>
+              
+             </div>
+
+
+             <!-- 2nd Box -->
+             <div class="w-[350px] h-[650px] bg-white rounded-[15px] flex flex-col justify-between items-start p-[5px]">
+              <!-- 1-st -->
+               <div class="bg-white w-[340px] rounded-[15px] flex flex-col justify-between gap-[5px] p-[20px] hover:w-[350px]  hover:mt-[-5px] hover:ml-[-5px] hover:skew-xy-1 transition-all 2s ease-in border-[1px] border-blue-800 font-semibold hover:shadow-[0_0_10px_0px_rgba(100,20,50)] hover:border-none">
+                <div class="flex justify-around">
+                  <h3>Pro</h3>
+                  <button
+              class=" w-[100px] px-[1px] py-[1px] bg-blue-800 rounded-[25px] mx-auto text-white ml-[10px]"
+            >
+              Popular
+            </button>
+                </div>
+                
+
+                <h2 class="text-[35px] font-bold">$599/m</h2>
+                <p>Price breakdown here</p>
+                <button
+              class=" w-[220px] px-[12px] py-[7px] bg-blue-800 rounded-[25px] mx-auto text-white"
+            >
+              Get Started
+            </button>
+            <p class="text-center font-normal">Got questions? Talk to an expert.</p>
+               </div>
+               <!-- 2-nd -->
+                <div class="flex flex-col gap-[5px] ml-[15px] ">
+                  
+                  <div
+                class="flex gap-[20px] items-center text-black font-semibold">
+                <a href=""><img src="asset/image/right arrow.svg" alt="" /></a>
+                <h4>Feature here</h4>
+                </div>
+
+                <div
+                class="flex gap-[20px] items-center text-black font-semibold">
+                <a href=""><img src="asset/image/right arrow.svg" alt="" /></a>
+                <h4>Feature here</h4>
+                </div>
+
+                <div
+                class="flex gap-[20px] items-center text-black font-semibold">
+                <a href=""><img src="asset/image/right arrow.svg" alt="" /></a>
+                <h4>Feature here</h4>
+                </div>
+
+                <div
+                class="flex gap-[20px] items-center text-black font-semibold">
+                <a href=""><img src="asset/image/right arrow.svg" alt="" /></a>
+                <h4>Feature here</h4>
+                </div>
+
+                <div
+                class="flex gap-[20px] items-center text-black font-semibold">
+                <a href=""><img src="asset/image/right arrow.svg" alt="" /></a>
+                <h4>Feature here</h4>
+                </div>
+              
+
+                </div>
+                <!-- 3rd Accrodion box -->
+                <div
+                class="accordion-box mt-[10px] mb-[25px] md:w-[310px] text-[15px] mx-auto border-[1px] rounded-[5px] border-blue-800"
+              >
+                <button
+                  class="accordion-button flex items-center justify-between w-full py-2 px-[30px] bg-transparent text-gray-800 font-bold"
+                  aria-expanded="false"
+                >
+                  <span class="text-black"
+                    >Optional add-ons</span
+                  >
+                  <span class="icon-open text-[25px] font-semibold text-black"
+                    >+</span
+                  >
+                  <span
+                    class="icon-close hidden text-[25px] font-semibold transform: rotate-[45deg] text-black"
+                    >+</span
+                  >
+                </button>
+                <div
+                  class="accordion-content hidden px-[30px] bg-slate-100 text-black py-[15px]"
+                >
+                  <ol class="font-normal flex flex-col gap-[10px]">
+                    <li>Placeholder - $400/yr</li>
+                    <li>Placeholder - $400/yr</li>
+                    <li>Placeholder - $400/yr</li>
+                  </ol>
+                </div>
+              </div>
+              
+             </div>
+
+             <!-- 3rd Box -->
+             <div class="w-[350px] h-[650px] bg-white rounded-[15px] flex flex-col justify-between items-start p-[5px]">
+              <!-- 1-st -->
+               <div class="bg-white w-[340px] rounded-[15px] flex flex-col justify-between gap-[5px] p-[20px] hover:w-[350px]  hover:mt-[-5px] hover:ml-[-5px] hover:skew-xy-1 transition-all 2s ease-in border-[1px] border-blue-800 font-semibold hover:shadow-[0_0_10px_0px_rgba(100,20,50)] hover:border-none">
+                <h3>Pro</h3>
+                <h2 class="text-[35px] font-bold">$499/m</h2>
+                <p>Price breakdown here</p>
+                <button
+              class=" w-[220px] px-[12px] py-[7px] bg-blue-800 rounded-[25px] mx-auto text-white"
+            >
+              Get Started
+            </button>
+            <p class="text-center font-normal">Got questions? Talk to an expert.</p>
+               </div>
+               <!-- 2-nd -->
+                <div class="flex flex-col gap-[5px] ml-[15px] ">
+                  
+                  <div
+                class="flex gap-[20px] items-center text-black font-semibold">
+                <a href=""><img src="asset/image/right arrow.svg" alt="" /></a>
+                <h4>Feature here</h4>
+                </div>
+
+                <div
+                class="flex gap-[20px] items-center text-black font-semibold">
+                <a href=""><img src="asset/image/right arrow.svg" alt="" /></a>
+                <h4>Feature here</h4>
+                </div>
+
+                <div
+                class="flex gap-[20px] items-center text-black font-semibold">
+                <a href=""><img src="asset/image/right arrow.svg" alt="" /></a>
+                <h4>Feature here</h4>
+                </div>
+
+                <div
+                class="flex gap-[20px] items-center text-black font-semibold">
+                <a href=""><img src="asset/image/right arrow.svg" alt="" /></a>
+                <h4>Feature here</h4>
+                </div>
+
+                <div
+                class="flex gap-[20px] items-center text-black font-semibold">
+                <a href=""><img src="asset/image/right arrow.svg" alt="" /></a>
+                <h4>Feature here</h4>
+                </div>
+              
+
+                </div>
+                <!-- 3rd Accrodion box -->
+                <div
+                class="accordion-box mt-[10px] mb-[25px] md:w-[310px] text-[15px] mx-auto border-[1px] rounded-[5px] border-blue-800"
+              >
+                <button
+                  class="accordion-button flex items-center justify-between w-full py-2 px-[30px] bg-transparent text-gray-800 font-bold"
+                  aria-expanded="false"
+                >
+                  <span class="text-black"
+                    >Optional add-ons</span
+                  >
+                  <span class="icon-open text-[25px] font-semibold text-black"
+                    >+</span
+                  >
+                  <span
+                    class="icon-close hidden text-[25px] font-semibold transform: rotate-[45deg] text-black"
+                    >+</span
+                  >
+                </button>
+                <div
+                  class="accordion-content hidden px-[30px] bg-slate-100 text-black py-[15px]"
+                >
+                  <ol class="font-normal flex flex-col gap-[10px]">
+                    <li>Placeholder - $400/yr</li>
+                    <li>Placeholder - $400/yr</li>
+                    <li>Placeholder - $400/yr</li>
+                  </ol>
+                </div>
+              </div>
+              
+             </div>
+
+          </div>
+        </section>
+       <!-- Pricing Section End -->
+       <!-- Accrodion Section Start -->
+    <section data-aos="fade-up" class="accordion-container md:max-w-[1200px] mx-auto mt-[50px] text-center">
+      <button
+            class="mx-auto text-center px-[10px] py-[7px] bg-white text-blue-800 rounded-[10px] font-semibold"
+          >
+          FAQ
+          </button>
+      <h2
+        class="text-[50px] mx-auto md:max-w-[700px] font-bold text-center leading-[60px] mb-[40px]"
+      >
+        You’ve got questions, we’ve got
+        <span class="text-blue-800">answers</span>
+      </h2>
+      <!-- Box-1 -->
+      <div
+        class="accordion-box mb-[25px] md:w-[700px] text-[17px] mx-auto border-[1px] rounded-[10px] border-blue-800"
+      >
+        <button
+          class="accordion-button flex items-center justify-between w-full py-2 px-[30px] bg-transparent text-gray-800 font-bold"
+          aria-expanded="false"
+        >
+          <span class="text-blue-800"
+            >How can I tell if using AI is the right solution for my
+            problem?</span
+          >
+          <span class="icon-open text-[35px] font-semibold text-blue-800"
+            >+</span
+          >
+          <span
+            class="icon-close hidden text-[35px] font-semibold transform: rotate-[45deg] text-blue-800"
+            >+</span
+          >
+        </button>
+        <div
+          class="accordion-content hidden px-[30px] bg-white text-black py-[15px]"
+        >
+          <p class="font-semibold text-left">
+            Figuring out which process to enhance using AI can be tricky for
+            business people. If you have a business problem where you feel that
+            the solution might be hidden in data and can't be solved with simple
+            rules, AI could be the answer. <br />
+            <br />To define an AI use case, you'll need the help of an AI team,
+            the person who knows the most about the issue (the problem owner),
+            and technical specialists who understand how to deal with the
+            problem in the technical world.
+          </p>
+        </div>
+      </div>
+      <!-- Box-2 -->
+      <div
+        class="accordion-box mb-[25px] md:w-[700px] text-[17px] mx-auto border-[1px] rounded-[10px] border-blue-800"
+      >
+        <button
+          class="accordion-button flex items-center justify-between w-full py-2 px-[30px] bg-transparent text-gray-800 font-bold"
+          aria-expanded="false"
+        >
+          <span class="text-blue-800"
+            >How long does an AI solution take to implement?</span
+          >
+          <span class="icon-open text-[35px] font-semibold text-blue-800"
+            >+</span
+          >
+          <span
+            class="icon-close hidden text-[35px] font-semibold text-blue-800 transform: rotate-[45deg]"
+            >+</span
+          >
+        </button>
+        <div
+          class="accordion-content hidden px-[30px] bg-white text-black py-[15px]"
+        >
+          <p class="font-semibold text-left">
+            Using AI involves a series of steps: collecting data, labeling it,
+            developing and training the model, testing and evaluating it, and
+            finally deploying the solution. At the beginning, data collection
+            and labeling take 20-50% of the time (higher % for smaller or
+            standard projects). <br /><br />
+            The rest of the time is spent on model development, testing, and
+            deployment, which depends on how unique the problem is, the
+            performance level required, and the complexity of deployment. AI
+            projects can last anywhere from 3 months to several years, depending
+            on the size and collaboration needed.
+          </p>
+        </div>
+      </div>
+      <!-- Box-3 -->
+      <div
+        class="accordion-box mb-[20px] md:w-[700px] text-[17px] mx-auto border-[1px] rounded-[10px] border-blue-800"
+      >
+        <button
+          class="accordion-button flex items-center justify-between w-full py-2 px-[30px] bg-transparent text-gray-800 font-bold"
+          aria-expanded="false"
+        >
+          <span class="text-blue-800"
+            >Will we need to make changes in our teams?</span
+          >
+          <span class="icon-open text-[35px] font-semibold text-blue-800"
+            >+</span
+          >
+          <span
+            class="icon-close hidden text-blue-800 text-[35px] font-semibold transform: rotate-[45deg]"
+            >+</span
+          >
+        </button>
+        <div
+          class="accordion-content hidden px-[30px] bg-white text-black py-[15px]"
+        >
+          <p class="font-semibold text-left">
+            No, you don't have to fire employees. AI and automation are only
+            there to help humans to be able to focus on the most important tasks
+            by automating time-consuming and repetitive tasks. In the long run,
+            process automation will make your teams happier and improves their
+            performance. <br />
+            <br />
+
+            All you need to do is sit back, let the automation run the
+            repetitive tasks, and focus on strategic tasks that only humans can
+            do. With our experience running AI projects, we know how frustrating
+            it is for company teams to integrate innovative AI & automation
+            solutions into their daily routines. <br />
+            <br />
+
+            With our approach, we not only implement an automation solution but
+            also help you to realize the "Future of Work" with all the freedom
+            that it brings.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Accrodion Section End -->
+    
+    </main>
+    <!-- Main Section End -->
+     <!-- Footer Section Start -->
+     <footer class="mx-auto md:max-w-[1200px] mt-[100px] ">
+      <div data-aos="fade-up" class="mx-auto md:max-w-[1200px] md:h-[500px] text-white">
+        <img src="https://framerusercontent.com/images/JZuLriJ7TC7r3vitihu47GM.svg" alt="" class="absolute bg-slate-800 w-[1200px] mx-auto z-[-5] rounded-[25px]">
+        <!-- Upper Section -->
+         <div class="mx-auto text-center items-center flex flex-col gap-[15px]">
+          <button
+            class="mx-auto items-center px-[10px] py-[7px] bg-white text-blue-800 rounded-[10px] font-semibold mt-[40px]"
+          >
+          Testimonials
+          </button>
+      <h2
+        class="text-[40px] mx-auto md:max-w-[500px] font-bold text-center"
+      >
+      Ready to
+        <span class="text-blue-800">Get Started?</span>
+      </h2>
+      <p class="md:max-w-[700px] mx-auto text-[18px]">Experience the future of business operations with AI automation—increased speed, accuracy, and adaptability, driving overall productivity gains.</p>
+      <button
+              class=" w-[220px] px-[12px] py-[7px] bg-blue-800 rounded-[25px] text-white"
+            >
+              Book Your Free Audit Call
+            </button>
+
+         </div>
+         <!-- Lower Section -->
+          <div class="flex justify-around items-center mt-[50px]">
+            <!-- Social Icon -->
+             <div class="flex gap-[10px]">
+              <img src="asset/image/social icon-1.svg" alt="" class="size-[50px] rounded-full border-[1px] border-blue-800 p-2">
+              <img src="asset/image/social icon-2.svg" alt="" class="size-[50px] rounded-full border-[1px] border-blue-800 p-2">
+              <img src="asset/image/social icon-3.svg" alt="" class="size-[50px] rounded-full border-[1px] border-blue-800 p-2">
+             </div>
+             <!-- Logo Div -->
+              <div class="flex flex-col items-center gap-[12px]">
+                <img src="asset/image/33ctg4SZtD9gAAbetHuuLUj6TE.png" alt="">
+                <p class="text-[12px]">Build a powerful agency site with Framer.</p>
+              </div>
+              <!-- Navigation Div -->
+               <div class="flex gap-[15px]">
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Blog</a>
+               </div>
+          </div>
+      </div>
+      <h5 class="fixed bottom-0 left-[900px] font-semibold text-slate-300  mb-[20px] mx-auto text-center">@ Copyright By Inmaj Hossain Shahin</h5>
+     </footer>
+     <!-- Footer Section End -->
+
+     
+
+    <!-- Accroding Script Start -->
+    <script>
+      const accordionButtons = document.querySelectorAll(".accordion-button");
+
+      accordionButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const accordionContent = button.nextElementSibling;
+          const isExpanded = button.getAttribute("aria-expanded") === "true";
+
+          // p tag aria-expanded
+          button.setAttribute("aria-expanded", !isExpanded);
+
+          // visibility of the content
+          if (isExpanded) {
+            accordionContent.classList.add("hidden");
+            button.querySelector(".icon-open").classList.remove("hidden");
+            button.querySelector(".icon-close").classList.add("hidden");
+          } else {
+            accordionContent.classList.remove("hidden");
+            button.querySelector(".icon-open").classList.add("hidden");
+            button.querySelector(".icon-close").classList.remove("hidden");
+          }
+        });
+      });
+    </script>
+    <!-- Accroding Script End -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+                  duration: 2000,
+              });
+    </script> 
+  </body>
+</html>
